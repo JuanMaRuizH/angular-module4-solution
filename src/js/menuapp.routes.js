@@ -17,7 +17,8 @@
         })
         .state('categories', {
           url: '/categories',
-          templateUrl: 'states/categories.html'
+          templateUrl: 'states/categories.html',
+          controller: 'CategoriesController as CategoriesCtrl'
         });
 
     }

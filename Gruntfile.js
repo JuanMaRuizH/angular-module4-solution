@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       js: {
-        files: 'src/{,*/}*.js',
+        files: ['src/{,*/}*.js', '!lib/{,*/}*.js', 'Gruntfile.js'],
         tasks: ['jshint'],
         options: {
           interrupt: true,

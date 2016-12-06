@@ -4,7 +4,7 @@
   "description": "Assigment 4 Single Page Applications - Coursera",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "grunt --verbose"
   },
   "repository": {
     "type": "git",
