@@ -3,26 +3,35 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt);
   // Project configuration.
   grunt.initConfig({
+    watch: {
+      js: {
+        files: 'src/{,*/}*.js',
+        tasks: ['jshint'],
+        options: {
+          interrupt: true,
+        },
+      }
+    },
     jshint: {
       options: {
           reporter: require('jshint-stylish'),
           jshintrc: true
       },
-      all: ['Gruntfile.js', 'js/**/*.js', '!node_modules/*/*.js']
+      all: ['Gruntfile.js', 'src/js/**/*.js', '!node_modules/*/*.js']
     },
     browserSync: {
         bsFiles: {
-            src : ['./{,*/}*.html', 'js/{,*/}*.js']
+            src : ['./{,*/}*.html', 'src/{,*/}*.js']
         },
         options: {
-            server: {
-                baseDir: './'
-            }
+          watchTask: true,
+          open: false,
+          server: './'
         }
     }
   });
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'browserSync']);
+  grunt.registerTask('default', ['jshint', 'browserSync', 'watch']);
 
 };

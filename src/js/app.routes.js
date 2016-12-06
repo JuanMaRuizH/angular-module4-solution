@@ -4,9 +4,9 @@
     .module('restaurantApp')
     .config(RoutesConfiguration);
 
-    RoutesConfiguration.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider']
+    RoutesConfiguration.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-    function RoutesConfiguration($stateProvider, $urlRouterProvider, $locationProvider) {
+    function RoutesConfiguration($stateProvider, $urlRouterProvider) {
       // Here goes your code
       $urlRouterProvider.otherwise('/');
 
