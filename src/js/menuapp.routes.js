@@ -14,6 +14,10 @@
         .state('home', {
           url: '/',
           templateUrl: 'states/home.html'
+        })
+        .state('categories', {
+          url: '/categories',
+          templateUrl: 'states/categories.html'
         });
 
     }
