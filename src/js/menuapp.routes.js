@@ -18,7 +18,14 @@
         .state('categories', {
           url: '/categories',
           templateUrl: 'states/categories.html',
-          controller: 'CategoriesController as CategoriesCtrl'
+          controller: 'CategoriesController',
+          controllerAs: 'categoriesCtrl'
+        })
+        .state('categories.items', {
+          url: '/categories/{item}',
+          templateUrl: 'states/items-list.html',
+          controller: 'ItemsController',
+          controllerAs: 'itemsCtrl',
         });
 
     }

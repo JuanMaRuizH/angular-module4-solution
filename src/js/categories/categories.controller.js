@@ -8,8 +8,10 @@
 
     function CategoriesController(MenuDataService) {
       var categoriesCtrl = this;
-      categoriesCtrl.items = MenuDataService.getAllCategories().then(function(response) {
-        return response.data;
+
+      MenuDataService.getAllCategories().then(function(response) {
+        categoriesCtrl.items = response.data;
+        return categoriesCtrl.items;
       });
     }
 })();

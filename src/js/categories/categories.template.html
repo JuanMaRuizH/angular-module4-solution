@@ -1,7 +1,3 @@
-<ul>
-  <li ng-repeat="item in $ctrl.items">{{item}}</li>
-</ul>
-
-<!-- <div class="list-group">
-  <a ui-sref="categories.item" class="list-group-item" ng-repeat="item in $ctrl.items">Cras justo odio</a>
-</div> -->
+<div class="list-group">
+  <a ui-sref="categories.item" class="list-group-item" ng-repeat="item in $ctrl.items">{{ item.name }}</a>
+</div>
