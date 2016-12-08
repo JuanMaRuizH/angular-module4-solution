@@ -1,0 +1,9 @@
+<header>
+  <h3>{{ itemsCtrl.category }}</h3>
+</header>
+<div class="col-sm-9 list-group">
+  <div href="#" class="list-group-item" ng-repeat="item in itemsCtrl.item">
+    <h4 class="list-group-item-heading">{{ item.name }}</h4>
+    <p class="list-group-item-text">{{ item.description }}</p>
+  </div>
+</div>

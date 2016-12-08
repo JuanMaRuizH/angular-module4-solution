@@ -21,11 +21,15 @@
           controller: 'CategoriesController',
           controllerAs: 'categoriesCtrl'
         })
-        .state('categories.items', {
-          url: '/categories/{item}',
+        .state('categories.item', {
+          url: '/{item}',
           templateUrl: 'states/items-list.html',
           controller: 'ItemsController',
           controllerAs: 'itemsCtrl',
+          params: {
+            item: null,
+            category: null
+          }
         });
 
     }
