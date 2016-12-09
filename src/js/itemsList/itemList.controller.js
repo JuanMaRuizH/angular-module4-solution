@@ -10,11 +10,8 @@
       var itemsCtrl = this;
       itemsCtrl.category = $stateParams.category;
       MenuDataService.getItemsForCategory($stateParams.item).then(function(response) {
-        itemsCtrl.item = response.data.menu_items;
-        console.log('itemsCtrl.item: ', itemsCtrl.item);
-        return itemsCtrl.item;
+        itemsCtrl.items = response.data;
+        return itemsCtrl.items;
       });
-      
-      console.log('$stateParams: ', $stateParams + itemsCtrl);  
     }
 })();
